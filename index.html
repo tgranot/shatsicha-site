@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
     <title>שעת שיחה | גלית גרנות - הכוונה מקצועית</title>
     <meta name="description" content="שעת שיחה עם גלית גרנות - הכוונה מקצועית לפתרון בעיות שמטרידות את שגרת החיים שלך">
     <link rel="canonical" href="https://shatsicha.com/">
@@ -149,6 +152,8 @@
                 <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
                     <!-- Web3Forms access key — register at https://web3forms.com with granotga@gmail.com to get your key -->
                     <input type="hidden" name="access_key" value="7a5761d1-80f7-4ec7-b24a-1b7066a3c9c1">
+                    <input type="hidden" name="cc" value="tlgranot@gmail.com">
+                    <input type="hidden" name="redirect" value="https://shatsicha.com/">
                     <!-- Form subject line in email -->
                     <input type="hidden" name="subject" value="פנייה חדשה מאתר שעת שיחה">
                     <!-- Honeypot spam protection -->
@@ -156,25 +161,26 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="firstName">שם פרטי</label>
-                            <input type="text" id="firstName" name="firstName" placeholder="שם פרטי" required>
+                            <input type="text" id="firstName" name="firstName" placeholder="שם פרטי" required autocomplete="given-name">
                         </div>
                         <div class="form-group">
                             <label for="lastName">שם משפחה</label>
-                            <input type="text" id="lastName" name="lastName" placeholder="שם משפחה" required>
+                            <input type="text" id="lastName" name="lastName" placeholder="שם משפחה" required autocomplete="family-name">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="email">אימייל</label>
-                        <input type="email" id="email" name="email" placeholder="אימייל" required>
+                        <input type="email" id="email" name="email" placeholder="אימייל" required autocomplete="email">
                     </div>
                     <div class="form-group">
                         <label for="phone">סלפון</label>
-                        <input type="tel" id="phone" name="phone" placeholder="סלפון">
+                        <input type="tel" id="phone" name="phone" placeholder="סלפון" autocomplete="tel">
                     </div>
                     <div class="form-group">
                         <label for="notes">הערות (לא חובה)</label>
                         <textarea id="notes" name="notes" placeholder="הערות"></textarea>
                     </div>
+                    <div class="h-captcha" data-captcha="true"></div>
                     <button type="submit" class="btn-submit">שליחה</button>
                     <div class="form-success" id="formSuccess">נדבר בקרוב</div>
                 </form>
@@ -236,6 +242,7 @@
         <p class="footer-copy">© 2026 שעת שיחה - גלית גרנות. כל הזכויות שמורות.</p>
     </footer>
 
+    <script src="https://web3forms.com/client/script.js" async defer></script>
     <script src="js/main.js"></script>
 
 </body>
