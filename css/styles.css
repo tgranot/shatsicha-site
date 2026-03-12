@@ -5,6 +5,7 @@
     --text-gray: #555555;
     --text-dark: #333333;
     --white: #FFFFFF;
+    --footer-bg: #2D4059;
     --shadow-soft: 0 2px 20px rgba(0,0,0,0.06);
     --transition: 0.3s ease;
 }
@@ -116,7 +117,7 @@ body {
 
 /* ─── HERO SECTION ─── */
 .hero {
-    background: var(--blue);
+    background: var(--blue) url('../images/hero-bg.jpg') center/cover no-repeat;
     padding-top: 80px;
     position: relative;
     overflow: hidden;
@@ -224,7 +225,7 @@ body {
 /* ─── CONTACT SECTION ─── */
 .contact {
     padding: 5rem 2rem;
-    background: var(--white);
+    background: var(--white) url('../images/contact-bg.jpg') center/cover no-repeat;
     position: relative;
     overflow: hidden;
 }
@@ -349,7 +350,7 @@ body {
 
 /* ─── FOOTER ─── */
 .footer {
-    background: var(--blue);
+    background: var(--footer-bg);
     padding: 3rem 2rem 2rem;
     text-align: center;
 }
