@@ -460,7 +460,22 @@ body {
 }
 
 .faq-item.open .faq-answer {
-    max-height: 300px;
+    max-height: 800px;
+}
+
+.faq-list {
+    list-style: disc;
+    padding-right: 1.2rem;
+    margin: 0;
+}
+
+.faq-list li {
+    margin-bottom: 0.8rem;
+    line-height: 1.9;
+}
+
+.faq-list li:last-child {
+    margin-bottom: 0;
 }
 
 .faq-answer-inner {
