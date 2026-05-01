@@ -2,6 +2,8 @@
     --blue: #B0C8DA;
     --blue-dark: #8FB0C6;
     --heading-blue: #6A9AB8;
+    --accent: #C9956B;
+    --accent-dark: #B5804E;
     --text-gray: #555555;
     --text-dark: #333333;
     --white: #FFFFFF;
@@ -27,6 +29,10 @@ body {
     color: var(--text-dark);
     line-height: 1.8;
     overflow-x: hidden;
+}
+
+h1, h2 {
+    font-family: 'Rubik', 'Heebo', sans-serif;
 }
 
 /* ─── NAVBAR ─── */
@@ -86,17 +92,21 @@ body {
     right: 0;
     width: 0;
     height: 2px;
-    background: var(--blue);
+    background: var(--accent);
     transition: width var(--transition);
 }
 
 .nav-links a:hover {
-    color: var(--heading-blue);
+    color: var(--accent);
 }
 
 .nav-links a:hover::after,
 .nav-links a.active::after {
     width: 100%;
+}
+
+.nav-links a.active {
+    color: var(--accent);
 }
 
 .mobile-toggle {
@@ -296,8 +306,8 @@ body {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--heading-blue);
-    box-shadow: 0 0 0 3px rgba(106, 154, 184, 0.15);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(201, 149, 107, 0.15);
 }
 
 .form-group textarea {
@@ -310,7 +320,7 @@ body {
     display: block;
     width: 100%;
     padding: 12px;
-    background: var(--blue);
+    background: var(--accent);
     color: var(--white);
     border: none;
     border-radius: 25px;
@@ -323,7 +333,7 @@ body {
 }
 
 .btn-submit:hover {
-    background: var(--blue-dark);
+    background: var(--accent-dark);
     transform: translateY(-1px);
 }
 
@@ -367,6 +377,7 @@ body {
     gap: 2rem;
     list-style: none;
     margin-bottom: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .footer-links a {
@@ -431,7 +442,7 @@ body {
 }
 
 .faq-question:hover {
-    color: var(--heading-blue);
+    color: var(--accent);
 }
 
 .faq-question-text {
@@ -519,20 +530,27 @@ body {
     border: 1px solid #e0e0e0;
     border-radius: 12px;
     padding: 1.8rem 2rem;
-    transition: border-color var(--transition), box-shadow var(--transition);
+    transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
 }
 
 .case-card:hover {
-    border-color: var(--blue);
-    box-shadow: 0 4px 16px rgba(176, 200, 218, 0.25);
+    border-color: var(--accent);
+    box-shadow: 0 6px 24px rgba(201, 149, 107, 0.18);
+    transform: translateY(-3px);
 }
 
 .case-card-title {
+    font-family: 'Rubik', 'Heebo', sans-serif;
     font-size: 1.15rem;
     font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 0.8rem;
     line-height: 1.6;
+    transition: color var(--transition);
+}
+
+.case-card:hover .case-card-title {
+    color: var(--accent-dark);
 }
 
 .case-card-preview {
@@ -545,7 +563,12 @@ body {
 .case-card-link {
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--heading-blue);
+    color: var(--accent);
+    transition: color var(--transition);
+}
+
+.case-card:hover .case-card-link {
+    color: var(--accent-dark);
 }
 
 /* ─── CASE ARTICLE PAGE ─── */
@@ -579,7 +602,7 @@ body {
 
 .case-bottom-line {
     background: rgba(176, 200, 218, 0.15);
-    border-right: 4px solid var(--blue);
+    border-right: 4px solid var(--accent);
     border-left: none;
     padding: 1.5rem 2rem;
     margin: 2rem 0 0;
@@ -590,7 +613,7 @@ body {
 }
 
 .case-bottom-line strong {
-    color: var(--heading-blue);
+    color: var(--accent-dark);
 }
 
 .case-back-link {
@@ -598,13 +621,45 @@ body {
     margin-top: 2.5rem;
     font-size: 1rem;
     font-weight: 600;
-    color: var(--heading-blue);
+    color: var(--accent);
     text-decoration: none;
     transition: color var(--transition);
 }
 
 .case-back-link:hover {
-    color: var(--blue-dark);
+    color: var(--accent-dark);
+}
+
+/* ─── CASE CTA SECTION ─── */
+.case-cta {
+    background: var(--blue);
+    padding: 3.5rem 2rem;
+    text-align: center;
+}
+
+.case-cta-heading {
+    color: var(--white);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.case-cta-button {
+    display: inline-block;
+    padding: 14px 40px;
+    background: var(--accent);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 25px;
+    font-family: 'Heebo', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    transition: background var(--transition), transform var(--transition);
+}
+
+.case-cta-button:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
 }
 
 /* ─── ABOUT PAGE ─── */
@@ -632,11 +687,20 @@ body {
     line-height: 2;
     text-align: right;
     direction: rtl;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.6rem;
 }
 
-.about-page-content p:last-child {
-    margin-bottom: 0;
+.about-page-callout {
+    background: rgba(201, 149, 107, 0.1);
+    border-right: 4px solid var(--accent);
+    border-left: none;
+    padding: 1.5rem 2rem;
+    margin-top: 1rem;
+    border-radius: 0 8px 8px 0;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    line-height: 2;
+    font-weight: 500;
 }
 
 /* ─── ANIMATIONS ─── */
@@ -730,5 +794,9 @@ body {
 
     .mobile-toggle {
         display: flex;
+    }
+
+    .case-card {
+        padding: 1.4rem 1.5rem;
     }
 }
