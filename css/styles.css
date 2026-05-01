@@ -472,6 +472,38 @@ body {
     direction: rtl;
 }
 
+/* ─── ABOUT PAGE ─── */
+.about-page {
+    padding: 6rem 2rem 4rem;
+    min-height: 70vh;
+}
+
+.about-page-inner {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.about-page-title {
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    font-weight: 700;
+    color: var(--heading-blue);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about-page-content p {
+    font-size: 1.05rem;
+    color: var(--text-gray);
+    line-height: 2;
+    text-align: right;
+    direction: rtl;
+    margin-bottom: 1.2rem;
+}
+
+.about-page-content p:last-child {
+    margin-bottom: 0;
+}
+
 /* ─── ANIMATIONS ─── */
 @keyframes fadeInRight {
     from { opacity: 0; transform: translateX(40px); }
