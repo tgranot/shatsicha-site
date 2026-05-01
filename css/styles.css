@@ -138,8 +138,8 @@ h1, h2 {
     margin: 0 auto;
     padding: 4rem 2rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
     align-items: center;
 }
 
@@ -176,12 +176,15 @@ h1, h2 {
     justify-content: center;
     align-items: center;
     animation: fadeInLeft 0.8s ease-out 0.2s both;
+    min-width: 0;
+    overflow: visible;
 }
 
 .hero-illustration svg {
     width: 100%;
-    max-width: 450px;
+    max-width: 480px;
     height: auto;
+    flex-shrink: 0;
 }
 
 /* ─── ABOUT SECTION ─── */
@@ -739,7 +742,7 @@ h1, h2 {
     }
 
     .hero-illustration svg {
-        max-width: 280px;
+        max-width: 300px;
     }
 
     .about-inner {
