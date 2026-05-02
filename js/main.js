@@ -6,7 +6,11 @@ window.addEventListener('scroll', () => {
 
 // Mobile nav toggle
 function toggleNav() {
-    document.getElementById('navLinks').classList.toggle('open');
+    const navLinks = document.getElementById('navLinks');
+    const toggle = document.getElementById('mobileToggle');
+    navLinks.classList.toggle('open');
+    const isOpen = navLinks.classList.contains('open');
+    toggle.setAttribute('aria-expanded', isOpen);
 }
 
 // Close mobile nav on link click
@@ -21,10 +25,15 @@ function toggleFaq(btn) {
     const item = btn.parentElement;
     const wasOpen = item.classList.contains('open');
 
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        const b = i.querySelector('.faq-question');
+        if (b) b.setAttribute('aria-expanded', 'false');
+    });
 
     if (!wasOpen) {
         item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
     }
 }
 

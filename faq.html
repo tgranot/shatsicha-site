@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
+    <meta charset="UTF-8">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2E1DC24WRF"></script>
     <script>
@@ -9,15 +10,73 @@
       gtag('js', new Date());
       gtag('config', 'G-2E1DC24WRF');
     </script>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
     <title>שאלות ותשובות | שעת שיחה - גלית גרנות</title>
     <meta name="description" content="שאלות ותשובות על שירות שעת שיחה עם גלית גרנות">
+    <link rel="canonical" href="https://shatsicha.com/faq.html">
+    <meta property="og:title" content="שאלות ותשובות | שעת שיחה - גלית גרנות">
+    <meta property="og:description" content="שאלות ותשובות על שירות שעת שיחה עם גלית גרנות">
+    <meta property="og:url" content="https://shatsicha.com/faq.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="he_IL">
+    <meta property="og:site_name" content="שעת שיחה">
+    <meta property="og:image" content="https://shatsicha.com/images/og-image.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Rubik:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23B0C8DA'/><text x='16' y='22' text-anchor='middle' font-size='18' font-family='sans-serif' fill='white'>ש</text></svg>">
     <link rel="stylesheet" href="css/styles.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "מה זו ״שעת שיחה״?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "תהליך הכוונה בן שלושה מפגשים, שבמסגרתו נאבחן את הבעיות שמטרידות את שגרת החיים שלך ונבנה תוכנית שתביא לפריצת דרך בנושא."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "למי זה מתאים?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "שעת שיחה מתאימה לאנשים בצמתי הכרעה אישיים ומקצועיים, למי שחווה תחושת תקיעות או תסכול, להתמודדות עם דילמות בינאישיות ומשפחתיות, לבעלי תפקידים בארגונים, למי שזקוק לכתובת דיסקרטית, ולמי שמחפש עזרה ראשונה רגשית ממוקדת."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "איך זה עובד?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "במהלך שלוש פגישות של כשעה נאבחן ונדייק את הבעיה, נבין כיצד ניתן להגיע לשינוי ונבנה תוכנית עבודה לצורך פריצת דרך - בין אם באמצעות הפניה למומחה ספציפי או המשך עבודה עצמית. הפגישות נערכות פנים אל פנים במקום לבחירתך."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "מה אשיג בתהליך?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "הקשבה לבעיה, הכוונה מנוסה ומקצועית וידיעה לאן להמשיך מכאן כדי לפתור את הבעיה או להקל עליה באופן משמעותי."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "כמה השירות עולה?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "נשמח להסביר על עלות השירות בשיחת טלפון. השאירו פרטים בטופס באתר ונהיה בקשר."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 
@@ -35,7 +94,7 @@
                 <li><a href="index.html#contact">צור קשר</a></li>
                 <li><a href="https://galitgranot.com" target="_blank" rel="noopener noreferrer">האתר הראשי</a></li>
             </ul>
-            <div class="mobile-toggle" id="mobileToggle" onclick="toggleNav()">
+            <div class="mobile-toggle" id="mobileToggle" onclick="toggleNav()" role="button" tabindex="0" aria-label="תפריט ניווט" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -49,7 +108,7 @@
             <h1 class="faq-page-title">שאלות ותשובות</h1>
 
             <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
+                <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
                     <span class="faq-question-text">מה זו ״שעת שיחה״?</span>
                     <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><polyline points="3,6 9,12 15,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                 </button>
@@ -61,7 +120,7 @@
             </div>
 
             <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
+                <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
                     <span class="faq-question-text">למי זה מתאים?</span>
                     <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><polyline points="3,6 9,12 15,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                 </button>
@@ -80,7 +139,7 @@
             </div>
 
             <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
+                <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
                     <span class="faq-question-text">איך זה עובד?</span>
                     <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><polyline points="3,6 9,12 15,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                 </button>
@@ -92,7 +151,7 @@
             </div>
 
             <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
+                <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
                     <span class="faq-question-text">מה אשיג בתהליך?</span>
                     <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><polyline points="3,6 9,12 15,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                 </button>
@@ -104,7 +163,7 @@
             </div>
 
             <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
+                <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
                     <span class="faq-question-text">כמה השירות עולה?</span>
                     <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><polyline points="3,6 9,12 15,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                 </button>
@@ -115,6 +174,12 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="case-cta">
+        <h2 class="case-cta-heading">רוצים לשוחח?</h2>
+        <a href="index.html#contact" class="case-cta-button">לפרטים ותיאום שיחה</a>
     </section>
 
     <!-- FOOTER -->
