@@ -235,6 +235,30 @@ h1, h2 {
     opacity: 0.92;
 }
 
+.social-links {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--white);
+    text-decoration: none;
+    transition: background var(--transition), transform var(--transition);
+}
+
+.social-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
 /* ─── CONTACT SECTION ─── */
 .contact {
     padding: 5rem 2rem;
