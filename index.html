@@ -31,6 +31,8 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23B0C8DA'/><text x='16' y='22' text-anchor='middle' font-size='18' font-family='sans-serif' fill='white'>ש</text></svg>">
     <link rel="preload" as="image" href="images/hero-bg.jpg" fetchpriority="high">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -168,6 +170,16 @@
         <div class="contact-inner">
             <div class="contact-form-wrapper reveal">
                 <h2 class="contact-heading">צרו קשר ונתחיל לדבר</h2>
+
+                <div class="booking-cta">
+                    <p class="booking-label">מעוניינים בשיחה? קבעו מועד נוח ביומן</p>
+                    <button type="button" class="btn-booking" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/granotga/new-meeting'}); return false;">קבעו שיחה</button>
+                </div>
+
+                <div class="contact-divider">
+                    <span>או שלחו שאלה</span>
+                </div>
+
                 <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="7a5761d1-80f7-4ec7-b24a-1b7066a3c9c1">
                     <input type="hidden" name="cc" value="tlgranot@gmail.com">

@@ -289,6 +289,68 @@ h1, h2 {
     text-align: center;
 }
 
+.booking-cta {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.booking-label {
+    font-size: 1rem;
+    color: var(--text-gray);
+    margin-bottom: 0.8rem;
+}
+
+.btn-booking {
+    display: inline-block;
+    width: 100%;
+    max-width: 320px;
+    padding: 14px 2rem;
+    background: var(--accent);
+    color: var(--white);
+    border: none;
+    border-radius: 25px;
+    font-family: 'Heebo', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+    box-shadow: 0 2px 8px rgba(201, 149, 107, 0.3);
+}
+
+.btn-booking:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(201, 149, 107, 0.4);
+}
+
+.btn-booking:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(201, 149, 107, 0.3);
+}
+
+.contact-divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    max-width: 500px;
+}
+
+.contact-divider::before,
+.contact-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--blue);
+    opacity: 0.5;
+}
+
+.contact-divider span {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    white-space: nowrap;
+}
+
 .contact-form {
     max-width: 500px;
 }
